@@ -15,7 +15,7 @@ function Formulario(){
         //si coincide y pasa me retorna un true, sino retorna false
     };
      // con el handleSubmit manejo el evento del submit
-    const handleSubmit = (e) => { //esto es funcion flecha, la (e) es el elemento que desencadena el evento
+    const handleSubmit = (e) => { //esto es funcion flecha, la (e) es el elemento que desencadena el evento, en este caso el form a travez del onSubmit
         e.preventDefault(); // EL .preventDefault() es la manera que yo tengo de avisarle que vamos a trabajar de otra manera,
         // en caso de que ocurra un return (acá entra el rol de los return) vas a quedar parado hasta tanto no haya ningun return
         

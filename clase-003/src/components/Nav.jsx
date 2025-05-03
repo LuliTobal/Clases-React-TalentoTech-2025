@@ -1,6 +1,6 @@
 import { Nav as NavBs, Navbar, Container } from "react-bootstrap";
 
-function Nav({items, onSelection})
+function Nav({items, onSeleccion})
 {
     return(
         <Navbar bg="light" expand="md">

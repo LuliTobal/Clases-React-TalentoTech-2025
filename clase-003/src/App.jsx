@@ -5,6 +5,7 @@ import Nav from './components/Nav';
 import Gallery from './components/Gallery';
 import Home from './components/Home';
 import Contact from './components/Contact';
+import Footer from './components/Footer';
 
 function App() {
   // const [count, setCount] = useState(0)
@@ -54,6 +55,8 @@ function App() {
         {/*para que el main muestre el contenido de acuerdo a que se selleccionó en el menú se llama a la funcion switch que en caso de seleccionar uno u otra seccíon va a mostrar un u otro contenido*/}
         {renderContenido()}
       </main>
+      <Footer />
+
     </div>
   );
 }

@@ -6,9 +6,8 @@ function Footer() {
             <Container>
                 <p className="mb-0">c 2025 Talento Tech. Todos los derechos reservados.</p>
             </Container>
-
         </footer>
-    ):
+    );
 }
 
 export default Footer;
