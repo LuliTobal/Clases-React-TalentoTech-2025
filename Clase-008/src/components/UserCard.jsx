@@ -1,10 +1,11 @@
-import { useContext } from "react";
-import { UserContext } from "../context/UserContext";
+//import { useContext } from "react";
+//import { UserContext } from "../context/UserContext";
 import { Card, Spinner } from 'react-bootstrap';
 
-const UserCard = () => {
-    const {user}=useContext(UserContext); // variable que llama a useContex y entre {} le pasamos a cual "contexto queremos acceder"
-    //guardamos en user el array de objetos que trae UserContext
+const UserCard = ({user}) => { //pasamos por promp en user desde el UserCardList, el array de objetos que trae UserContext
+    //const {user}=useContext(UserContext); // variable que llama a useContex y entre {} le pasamos a cual "contexto queremos acceder"
+    // en caso de se una sola persona que necesitamos obtener sus datos
+    
 
     if(!user) {
         return(

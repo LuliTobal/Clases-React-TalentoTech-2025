@@ -7,7 +7,7 @@ const CargarBotonUsuario = () => {
 
     return(
         <div className="text-center mt-3">
-            <Button variant="primary" onClick={fetchRandomUser}> {/*Le paso el nombre de la funcion del context a la que tiene que acceder */}
+            <Button variant="primary" onClick={fetchRandomUser}> {/*Le paso el nombre de la funcion del context a la que tiene que acceder esto ejecuta la función en cada click*/}
                 Cargar nuevo usuario
             </Button>
         </div>

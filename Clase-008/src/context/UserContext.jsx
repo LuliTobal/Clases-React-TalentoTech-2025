@@ -5,14 +5,16 @@ export const UserContext = createContext(); //createContext() crea el contenedor
 
 //armamos el wrapper, como envoltorio donde poder usar el UserContext
 export const UserProvider = ({ children }) => { //funcion flecha que especifica su disponibilidad  a los elementos hijos, por eso {{children}}, los elementos que luego vamos a envolver en el wrap
-    
-    const [user, setUser] = useState(null);// useState cambia de manera dinámica el valor de user a partir de setUser
+    //useState cambia de manera dinámica el valor de user a partir de setUser
+    const [user, setUser] = useState([]);// Lo iniciamos como array porque queremos renderizar mas de una car con distinta info sino lo iniciamos (null)
 
     //creamos la constante que realmente vale, con la informacion de la API publica de random user en este caso
     const fetchRandomUser = async () => { //esta constante es igual a una función asincrónica que va a ser un fetch
         const res = await fetch('https://randomuser.me/api/'); //guardamos en una constante la respuesta que trae de la API
         const data = await res.json(); //esperamos la respuesta y una vez que llega la guardamos la respuesta y la parseamos para convertirla en un array de objetos JS
-        setUser(data.results[0]); //seteamos el primer usuario, si trae mas de uno no lo setea por eso [0] para que se quede con los datos del primero
+        //setUser(data.results[0]); esto es si queremos traer solo uno seteamos el primer usuario, si trae mas de uno no lo setea por eso [0] para que se quede con los datos del primero
+        setUser((prevUser) => [...prevUser,data.results[0]]); //aca seteamos el array, arranca nullo, al ejecutarse la funcion se agrega un objeto,
+        // al hacer click en el boton se ejecuta de nuevo y suma un nuevo objeto al array a travez de la funcion flecha
     };
 
     useEffect(() => { //funcion flecha que llama a la constante del fetch para que la cargue inicialmente

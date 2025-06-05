@@ -1,11 +1,9 @@
-import { useState } from 'react'
 import { UserProvider } from './context/UserContext'
 import { Container } from 'react-bootstrap'
-import UserCard from './components/UserCard'
+import UserCardList from './components/UserCardList'
 import CargarBotonUsuario from './components/CargarBotonUser'
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <>
@@ -13,8 +11,8 @@ function App() {
       y va a poder acceder a la información pasada por value en la creacion del contexto*/}
         <Container>
           <h1>Usuario Aleatorio</h1>
-          <UserCard />
-          <CargarBotonUsuario />
+          <UserCardList /> {/*Si solo queremos una card llamamos el componente UserCard unicamente  hacemos las modificaciones correspondientes */}
+          <CargarBotonUsuario /> 
         </Container>
       </UserProvider>
     </>
